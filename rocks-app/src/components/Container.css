@@ -1,0 +1,23 @@
+.custom-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    border: 1px solid #B9FD50; /* Lighter green border */
+    border-radius: 2px;
+    background-color: #222;
+    box-shadow: 0 0 3px 3px rgba(212, 251, 178, 0.5); /* Adjusted box shadow for a lighter green */
+    overflow: hidden; /* Ensure the content stays within the borders */
+  }
+  
+  .custom-container-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #d9d5d5;
+  }
+  
+  .custom-container-content {
+    padding: 10px;
+    background-color: #222222;
+    border-radius: 4px;
+    color: #d9d5d5 ;
+  }
