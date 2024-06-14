@@ -1,17 +1,18 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import Ellipse from './components/Ellipse';
+// App.jsx
+
+import React from 'react';
 import './App.css';
+import Header from './components/Header'; // Adjust the path based on your project structure
 import BackgroundImageComponent from './components/bgimage';
+import CustomContainer from './components/Container'; // Assuming you already have this component imported
+
 import img from './assets/images/testbg.png';
-import CustomContainer from './components/Container'; // Import the new component
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className='bgApp'>
+      <Header />
+
       <BackgroundImageComponent img={img} />
       {/* <img src={img} alt="" style={{ width: "100%"}} /> */}
       {/* <Ellipse/> */}
