@@ -5,6 +5,7 @@ import Ellipse from './components/Ellipse'
 import './App.css'
 import BackgroundImageComponent from './components/bgimage'
 import img from './assets/images/testbg.png'
+import FileInput from './components/FileInput'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +17,8 @@ function App() {
      {/* <img src={img} alt="" style={{ width: "100%"}} /> */}
 
         {/* <Ellipse/> */}
-   <h1 style={{height:'500px', marginTop:'500px'}}>   </h1>
+   <FileInput   />
+
     </div>
   )
 }
