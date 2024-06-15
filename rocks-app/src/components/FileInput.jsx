@@ -36,26 +36,26 @@ function FileInput() {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div {...getRootProps()} style={dropzoneStyles}>
         <input {...getInputProps()} />
         {
           isDragActive ?
-            <p style={{ color: 'white' }}>Drop the files here ...</p> :
-            <p style={{ color: 'white' }}>Drag 'n' drop some files here, or click to select files</p>
+            <p style={textStyle}>Drop the files here ...</p> :
+            <p style={textStyle}>Drag And Drop Or Click To Browse Files</p>
         }
       </div>
       {selectedFiles.length > 0 && (
-        <div>
-          <h4 style={{ color: 'white' }}>Selected Files:</h4>
+        <div style={{ width: '60%', marginTop: '20px' }}>
+          <h4 style={textStyle1}>Selected Files:</h4>
           <ul>
             {selectedFiles.map(file => (
-              <li key={file.name} style={{ color: 'white' }}>
+              <li key={file.name} style={textStyle1}>
                 {file.name} - {file.size} bytes
               </li>
             ))}
           </ul>
-          <button onClick={handleUpload}>Upload Files</button>
+          <button style={buttonStyle} onClick={handleUpload}>Save Files</button>
         </div>
       )}
     </div>
@@ -68,7 +68,36 @@ const dropzoneStyles = {
   padding: '20px',
   textAlign: 'center',
   cursor: 'pointer',
-  color: 'white', // Ensure text color is white for the main container
+  color: 'white',
+  width: '60%',
+  marginBottom: '50px'
+};
+
+const textStyle1 = {
+  color: 'white',
+  fontFamily: 'Outfit, sans-serif',
+  fontWeight: 500,
+  fontSize: '10px',
+};
+
+const textStyle = {
+  color: 'white',
+  fontFamily: 'Outfit, sans-serif',
+  fontWeight: 500,
+  fontSize: '40px',
+};
+
+const buttonStyle = {
+  backgroundColor: '#B9FD50',
+  borderRadius: '10%',
+  padding: '10px 20px',
+  border: '2px solid black', // Set border to black
+  color: 'black', // Set font color to black
+  cursor: 'pointer',
+  fontFamily: 'Outfit, sans-serif',
+  fontWeight: 500,
+  fontSize: '30px',
+  marginBottom:'20px'
 };
 
 export default FileInput;
