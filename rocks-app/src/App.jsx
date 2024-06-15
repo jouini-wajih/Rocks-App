@@ -23,8 +23,7 @@ function App() {
         <p style={{fontFamily: 'Outfit, sans-serif', fontSize:'20px',opacity:'0.7',marginBottom:'80px'}}>you can drag and drop multiple files of simply click to browse your files </p>
       <FileInput   />
       </CustomContainer>
-
-      <h1 style={{ height: '500px', marginTop: '500px' }}> </h1>
+      <CustomContainer title="Well Logs Plot" width='93%' height='800px' ></CustomContainer>
     </div>
   );
 }

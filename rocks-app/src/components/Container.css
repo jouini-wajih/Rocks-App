@@ -1,6 +1,6 @@
 .custom-container {
   padding: 20px;
-  margin: 20px auto;
+  margin: 20px auto 100px;
   border: 0.5px solid #B9FD50; /* Lighter green border */
   border-radius: 3px;
   background-color: #222;
