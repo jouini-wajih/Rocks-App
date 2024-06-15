@@ -1,26 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Ellipse from './components/Ellipse'
 import './App.css'
-import BackgroundImageComponent from './components/bgimage'
 import img from './assets/images/testbg.png'
 import FileInput from './components/FileInput'
+// App.jsx
+
+import React from 'react';
+import './App.css';
+import Header from './components/Header'; // Adjust the path based on your project structure
+import BackgroundImageComponent from './components/bgimage';
+import CustomContainer from './components/Container'; // Assuming you already have this component imported
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className='bgApp'>
+      <Header />
 
-<BackgroundImageComponent img={img} />
-     {/* <img src={img} alt="" style={{ width: "100%"}} /> */}
+      <BackgroundImageComponent img={img} />
+  
+   
 
-        {/* <Ellipse/> */}
-   <FileInput   />
+      <CustomContainer title="Import Your Data" width='70%' >
+        <p style={{fontFamily: 'Outfit, sans-serif', fontSize:'20px',opacity:'0.7',marginBottom:'80px'}}>you can drag and drop multiple files of simply click to browse your files </p>
+      <FileInput   />
+      </CustomContainer>
 
+      <h1 style={{ height: '500px', marginTop: '500px' }}> </h1>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

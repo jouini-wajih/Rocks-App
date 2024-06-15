@@ -35,41 +35,33 @@ function FileInput() {
     }
   };
 
+  const totalSize = selectedFiles.reduce((acc, file) => acc + file.size, 0);
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div {...getRootProps()} style={dropzoneStyles}>
         <input {...getInputProps()} />
-        {
-          isDragActive ?
-            <p style={textStyle}>Drop the files here ...</p> :
-            <p style={textStyle}>Drag And Drop Or Click To Browse Files</p>
-        }
+        <p style={textStyle}>Drag And Drop</p>
       </div>
       {selectedFiles.length > 0 && (
-        <div style={{ width: '60%', marginTop: '20px' }}>
-          <h4 style={textStyle1}>Selected Files:</h4>
-          <ul>
-            {selectedFiles.map(file => (
-              <li key={file.name} style={textStyle1}>
-                {file.name} - {file.size} bytes
-              </li>
-            ))}
-          </ul>
-          <button style={buttonStyle} onClick={handleUpload}>Save Files</button>
+        <div style={{ width: '60%' }}>
+          <h4 style={textStyle1}>Selected Files: {selectedFiles.length}</h4>
+          <h4 style={textStyle1}>Total Size: {totalSize} bytes</h4>
         </div>
       )}
+      <button style={buttonStyle} onClick={handleUpload}>Save Files</button>
     </div>
   );
 }
 
 const dropzoneStyles = {
-  border: '2px dashed #aaa',
+  border: '2px dashed #B9FD50',
   borderRadius: '4px',
   padding: '20px',
   textAlign: 'center',
   cursor: 'pointer',
   color: 'white',
-  width: '60%',
+  width: '70%',
   marginBottom: '50px'
 };
 
@@ -85,6 +77,7 @@ const textStyle = {
   fontFamily: 'Outfit, sans-serif',
   fontWeight: 500,
   fontSize: '40px',
+  opacity: 0.5, 
 };
 
 const buttonStyle = {
@@ -97,7 +90,7 @@ const buttonStyle = {
   fontFamily: 'Outfit, sans-serif',
   fontWeight: 500,
   fontSize: '30px',
-  marginBottom:'20px'
+  marginBottom: '20px'
 };
 
 export default FileInput;

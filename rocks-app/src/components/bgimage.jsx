@@ -1,5 +1,6 @@
 import React from 'react';
 import star from "../assets/images/Star.png"
+import rect from "../assets/images/Rect4.png"
 const BackgroundImageComponent = ({ img }) => {
   const backgroundStyle = {
     width: "100%",
@@ -33,6 +34,31 @@ const BackgroundImageComponent = ({ img }) => {
       position:'relative',
       bottom:'70px'
     };
+    const imageStyles = {
+      width: '50px',
+    };
+    
+    const textStyles = {
+      margin: '0 10px', // Adjust spacing between the text and images
+    };
+
+    const containerStyles = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center', // Center items horizontally
+      position:'relative',
+      top:'70px'
+    };
+
+    const textStyles2= {
+      fontFamily: 'Outfit, sans-serif',
+      fontWeight: 'bold', // Make the text bold
+      textTransform: 'uppercase', // Convert text to uppercase
+      paddingLeft: '20px', // Padding on the left
+      paddingRight: '20px',
+      letterSpacing: '1.5px', // Adjust letter spacing
+    opacity: 0.8,
+    }
 
   return (
     <div style={backgroundStyle}>
@@ -46,6 +72,11 @@ const BackgroundImageComponent = ({ img }) => {
       <span style={{ color: '#B9FD50' }}>Features Extraction</span>{' '}
       <span style={{ color: 'white' }}>And Types Predection</span>
     </h1>
+     <div style={containerStyles}>
+      <img src={rect} alt="rect" style={imageStyles} />
+      <span style={textStyles2}>geological features extraction from rock cores</span>
+            <img src={rect} alt="rect" style={imageStyles} />
+    </div>
       </div>
     </div>
   );

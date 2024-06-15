@@ -1,0 +1,28 @@
+.custom-container {
+  padding: 20px;
+  margin: 20px auto;
+  border: 0.5px solid #B9FD50; /* Lighter green border */
+  border-radius: 3px;
+  background-color: #222;
+  box-shadow: 0 0 3px 3px rgba(212, 251, 178, 0.2); /* Adjusted box shadow for a lighter green */
+  overflow: hidden; /* Ensure the content stays within the borders */
+}
+
+.custom-container-title {
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 0.23em; /* 1% letter spacing */
+}
+
+.custom-container-content {
+  
+  background-color: #222222;
+  border-radius: 4px;
+  color: #d9d5d5;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 0.01em; /* 1% letter spacing */
+}
