@@ -7,34 +7,36 @@
     justify-content: space-between;
     padding: 20px;
     background-color: transparent; /* Transparent background */
-    position:absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000; /* Ensure it's above other content */
   }
   
+  /* Logo styling */
   .logo {
-    font-size: 30px; /* Adjust font size as needed */
+    font-size: 24px;
     font-weight: bold;
+    padding-left: 150px;
+    color: #ffffff; /* White color */
     display: flex;
     align-items: center;
-    padding-left: 150px;
   }
   
   .logo .geo {
-    color: #fff; /* White color for "Geo" */
+    color: #ffffff; /* Adjust Geo color */
   }
   
   .logo .core {
-    color: #B9FD50; /* Green color for "Core" */
-    margin-left: 5px; /* Adjust spacing between "Geo" and "Core" */
+    color: #B9FD50; /* Adjust Core color */
   }
   
+  /* Navigation bar */
   .navbar {
     flex: 1;
     display: flex;
+    padding-right: 100px;
     justify-content: flex-end; /* Align navigation to the right */
-    padding-right: 150px; /* Adjust right padding as needed */
   }
   
   .header-nav {
@@ -44,32 +46,43 @@
   }
   
   .header-nav li {
+    position: relative;
     margin-right: 30px; /* Adjust spacing between links */
+    cursor: pointer;
   }
   
-  .header-nav li:last-child {
-    margin-right: 0;
-  }
-  
-  .header-nav a {
+  .header-nav li a {
     text-decoration: none;
     color: #fefefe; /* Adjust link color */
     font-weight: bold;
-    transition: color 0.3s ease;
+    position: relative;
   }
   
-  .header-nav a:hover {
-    color: rgb(34, 182, 34); /* Adjust hover color */
+  /* Before pseudo-element for hover effect */
+  .header-nav li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; /* Adjust inset to control thickness */
+    background: #166408; /* Adjust color */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
   }
   
+  .header-nav li:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* CTA buttons */
   .cta-buttons {
     display: flex;
-    padding-right: 100px; /* Adjust right padding for buttons */
+    padding-right: 100px;
   }
   
   .cta-buttons .cta {
     background-color: #B9FD50; /* Button background color */
-    color: rgb(0, 0, 0); /* Button text color */
+    color: #000000; /* Button text color */
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -77,6 +90,6 @@
   }
   
   .cta-buttons .cta:hover {
-    background-color: rgb(34, 182, 34); /* Button hover background color */
+    background-color: #8bc34a; /* Adjust hover background color */
   }
   
