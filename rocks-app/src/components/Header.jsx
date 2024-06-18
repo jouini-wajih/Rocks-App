@@ -1,11 +1,13 @@
 import React from 'react';
 import './Header.css';
+import logo from '../assets/images/geocore_services_germany_logo.jpg';
 
 function Header() {
   return (
     <header className="header">
-      {/* Website's logo as text */}
+      {/* Website's logo as image and text */}
       <div className="logo">
+        <img src={logo} alt="Logo" className="logo-image" />
         <span className="geo">Geo</span>
         <span className="core">Core</span>
       </div>

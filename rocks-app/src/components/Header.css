@@ -1,95 +1,97 @@
-/* Header.css */
-
 .header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: transparent; /* Transparent background */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  /* Logo styling */
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    padding-left: 150px;
-    color: #ffffff; /* White color */
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo .geo {
-    color: #ffffff; /* Adjust Geo color */
-  }
-  
-  .logo .core {
-    color: #B9FD50; /* Adjust Core color */
-  }
-  
-  /* Navigation bar */
-  .navbar {
-    flex: 1;
-    display: flex;
-    padding-right: 100px;
-    justify-content: flex-end; /* Align navigation to the right */
-  }
-  
-  .header-nav {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .header-nav li {
-    position: relative;
-    margin-right: 30px; /* Adjust spacing between links */
-    cursor: pointer;
-  }
-  
-  .header-nav li a {
-    text-decoration: none;
-    color: #fefefe; /* Adjust link color */
-    font-weight: bold;
-    position: relative;
-  }
-  
-  /* Before pseudo-element for hover effect */
-  .header-nav li:before {
-    content: "";
-    position: absolute;
-    inset: calc(100% - 3px) 0 0 0; /* Adjust inset to control thickness */
-    background: #166408; /* Adjust color */
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .header-nav li:hover:before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  
-  /* CTA buttons */
-  .cta-buttons {
-    display: flex;
-    padding-right: 100px;
-  }
-  
-  .cta-buttons .cta {
-    background-color: #B9FD50; /* Button background color */
-    color: #000000; /* Button text color */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-buttons .cta:hover {
-    background-color: #8bc34a; /* Adjust hover background color */
-  }
-  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 150px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.logo .logo-image {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust spacing between logo and text */
+}
+
+.logo .geo {
+  color: #ffffff;
+}
+
+.logo .core {
+  color: #B9FD50;
+}
+
+/* Navigation bar */
+.navbar {
+  flex: 1;
+  display: flex;
+  padding-right: 100px;
+  justify-content: flex-end;
+}
+
+.header-nav {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.header-nav li {
+  position: relative;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.header-nav li a {
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: bold;
+  position: relative;
+}
+
+.header-nav li:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0;
+  background: #166408;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-nav li:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* CTA buttons */
+.cta-buttons {
+  display: flex;
+  padding-right: 100px;
+}
+
+.cta-buttons .cta {
+  background-color: #B9FD50;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-buttons .cta:hover {
+  background-color: #8bc34a;
+}
