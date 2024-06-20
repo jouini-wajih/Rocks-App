@@ -9,6 +9,7 @@ const CustomContainer = ({ title, children ,width,height }) => {
       <h2 className="custom-container-title">{title}</h2>
       <div className="custom-container-content">
         {children}
+        
       </div>
     </div>
   );

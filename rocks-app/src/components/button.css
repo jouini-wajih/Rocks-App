@@ -1,0 +1,15 @@
+/* GenerateButton.css */
+
+.generate-button {
+    background-color: #B9FD50;
+    border: 2px solid black;
+    border-radius: 10%;
+    color: black;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+  
